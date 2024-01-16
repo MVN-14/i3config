@@ -102,7 +102,7 @@ bindsym $mod+a focus parent
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-# set $ws4 "4"
+set $ws4 "4"
 # set $ws5 "5"
 # set $ws6 "6"
 # set $ws7 "7"
@@ -146,9 +146,15 @@ bindsym $mod+Shift+s exec --nostartup-id gnome-screenshot --interactive
 
 # os #
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+c reload
 bindsym $mod+x exec i3lock
+
+# i3 #
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym button2 kill
+default_border normal 1 
+smart_borders on
+
 
 # launch #
 bindsym $mod+b exec --no-startup-id firefox/firefox
@@ -165,12 +171,8 @@ bindsym $mod+Ctrl+c exec --no-startup-id dmenu-edit-config
 bindsym $mod+Ctrl+o exec --no-startup-id dmenu-soad
 bindsym $mod+Ctrl+d exec --no-startup-id dmenu-dev
 
-default_border normal 1 
-smart_borders on
 
 # jack #
 for_window [class="jack"] floating enable; 
 for_window [class="jack"] resize set 450 150;
 for_window [Title="Graph"] floating disable; 
-
-
