@@ -34,7 +34,7 @@ bindsym XF86AudioPrev exec playerctl --player=spotify previous && $refresh_i3blo
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+BackSpace kill
